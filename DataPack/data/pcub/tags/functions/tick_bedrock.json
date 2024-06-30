@@ -1,6 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"pcub_ext:tick_bedrock"
+		"element_pcub:tick_bedrock"
 	]
 }
