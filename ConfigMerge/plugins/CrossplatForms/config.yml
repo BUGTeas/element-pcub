@@ -1,0 +1,8 @@
+commands:
+  #元素银行（命令捷径）
+  element_menubook:
+    method: register
+    command: element_menubook
+    actions:
+      - form: element_menubook-%objective_score_{feather_mainland}%-%objective_score_{element_dlc_optional1}_{#system}%
+    permission: crossplatforms.command.open
