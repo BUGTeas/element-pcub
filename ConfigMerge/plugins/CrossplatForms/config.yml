@@ -1,8 +1,22 @@
 commands:
   #元素银行（命令捷径）
-  element_menubook:
+  element-menu-base:
     method: register
-    command: element_menubook
+    command: element-menu-base
     actions:
-      - form: element_menubook-%objective_score_{feather_mainland}%-%objective_score_{element_dlc_optional1}_{#system}%
+      - form: element_menubook-%objective_score_{feather_mainland}%-0
+    permission: crossplatforms.command.open
+  #元素银行无损转化（命令捷径）
+  element-menu-optional1:
+    method: register
+    command: element-menu-optional1
+    actions:
+      - form: element_menubook-%objective_score_{feather_mainland}%-1
+    permission: crossplatforms.command.open
+  #掌上钱庄（命令捷径）
+  element-menu-optional3:
+    method: register
+    command: element-menu-optional3
+    actions:
+      - form: element_menubook-%objective_score_{feather_mainland}%-3
     permission: crossplatforms.command.open

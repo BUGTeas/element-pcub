@@ -6,23 +6,23 @@ forms:
     title: "pcub.title.element"
     content: "pcub.content.element"
     buttons: 
-      - text: "金元素： %objective_score_{element_number_metal}% 个"
+      - text: "金元素： §l%objective_score_{element_number_metal}%§r 个"
         image: "textures/menubook/element/metal"
         actions:
           - form: element_menubook-metal
-      - text: "木元素： %objective_score_{element_number_wood}% 个"
+      - text: "木元素： §l%objective_score_{element_number_wood}%§r 个"
         image: "textures/menubook/element/wood"
         actions:
           - form: element_menubook-wood
-      - text: "水元素： %objective_score_{element_number_water}% 个"
+      - text: "水元素： §l%objective_score_{element_number_water}%§r 个"
         image: "textures/menubook/element/water"
         actions:
           - form: element_menubook-water
-      - text: "火元素： %objective_score_{element_number_fire}% 个"
+      - text: "火元素： §l%objective_score_{element_number_fire}%§r 个"
         image: "textures/menubook/element/fire"
         actions:
           - form: element_menubook-fire
-      - text: "土元素： %objective_score_{element_number_earth}% 个"
+      - text: "土元素： §l%objective_score_{element_number_earth}%§r 个"
         image: "textures/menubook/element/earth"
         actions:
           - form: element_menubook-earth
@@ -37,37 +37,33 @@ forms:
       text: "gui.back"
       actions:
         - form: menubook-be
-  #主菜单（元素无消耗转化）
+  #主菜单（元素无损转化）
   element_menubook-1-1:
     type: simple_form
-    title: "pcub.title.element"
-    content: "pcub.content.element"
+    title: "当前共 §l%objective_score_{element_number_total}%§r 个通用元素"
+    content: "pcub.content.element.optional1"
     buttons: 
-      - text: "金元素： %objective_score_{element_number_metal}% 个"
+      - text: "金元素"
         image: "textures/menubook/element/metal"
         actions:
-          - form: element_menubook-metal
-      - text: "木元素： %objective_score_{element_number_wood}% 个"
+          - form: element_optional1-metal
+      - text: "木元素"
         image: "textures/menubook/element/wood"
         actions:
-          - form: element_menubook-wood
-      - text: "水元素： %objective_score_{element_number_water}% 个"
+          - form: element_optional1-wood
+      - text: "水元素"
         image: "textures/menubook/element/water"
         actions:
-          - form: element_menubook-water
-      - text: "火元素： %objective_score_{element_number_fire}% 个"
+          - form: element_optional1-water
+      - text: "火元素"
         image: "textures/menubook/element/fire"
         actions:
-          - form: element_menubook-fire
-      - text: "土元素： %objective_score_{element_number_earth}% 个"
+          - form: element_optional1-fire
+      - text: "土元素"
         image: "textures/menubook/element/earth"
         actions:
-          - form: element_menubook-earth
-      - text: "通用元素： %objective_score_{element_number_total}% 个"
-        image: "textures/menubook/chest1"
-        actions:
-          - form: element_menubook-total
-  #大陆外无法使用（元素无消耗转化）
+          - form: element_optional1-earth
+  #大陆外无法使用（元素无损转化）
   element_menubook--1-1:
     type: modal_form
     title: "gui.error"
@@ -81,7 +77,7 @@ forms:
   #金
   element_menubook-metal:
     type: simple_form
-    title: "存入/取出金元素 （当前共有 %objective_score_{element_number_metal}% 个）"
+    title: "存入/取出金元素 （当前共有 §l%objective_score_{element_number_metal}%§r 个）"
     content: "pcub.content.element.tips"
     buttons: 
       - text: "pcub.element.store5"
@@ -115,11 +111,11 @@ forms:
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
-          - form: element_menubook-1-%objective_score_{element_dlc_optional1}_{#system}%
+          - form: element_menubook-1-0
   #木
   element_menubook-wood:
     type: simple_form
-    title: "存入/取出木元素 （当前共有 %objective_score_{element_number_wood}% 个）"
+    title: "存入/取出木元素 （当前共有 §l%objective_score_{element_number_wood}%§r 个）"
     content: "pcub.content.element.tips"
     buttons: 
       - text: "pcub.element.store5"
@@ -153,11 +149,11 @@ forms:
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
-          - form: element_menubook-1-%objective_score_{element_dlc_optional1}_{#system}%
+          - form: element_menubook-1-0
   #水
   element_menubook-water:
     type: simple_form
-    title: "存入/取出水元素 （当前共有 %objective_score_{element_number_water}% 个）"
+    title: "存入/取出水元素 （当前共有 §l%objective_score_{element_number_water}%§r 个）"
     content: "pcub.content.element.tips"
     buttons: 
       - text: "pcub.element.store5"
@@ -191,11 +187,11 @@ forms:
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
-          - form: element_menubook-1-%objective_score_{element_dlc_optional1}_{#system}%
+          - form: element_menubook-1-0
   #火
   element_menubook-fire:
     type: simple_form
-    title: "存入/取出火元素 （当前共有 %objective_score_{element_number_fire}% 个）"
+    title: "存入/取出火元素 （当前共有 §l%objective_score_{element_number_fire}%§r 个）"
     content: "pcub.content.element.tips"
     buttons: 
       - text: "pcub.element.store5"
@@ -229,11 +225,11 @@ forms:
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
-          - form: element_menubook-1-%objective_score_{element_dlc_optional1}_{#system}%
+          - form: element_menubook-1-0
   #土
   element_menubook-earth:
     type: simple_form
-    title: "存入/取出土元素 （当前共有 %objective_score_{element_number_earth}% 个）"
+    title: "存入/取出土元素 （当前共有 §l%objective_score_{element_number_earth}%§r 个）"
     content: "pcub.content.element.tips"
     buttons: 
       - text: "pcub.element.store5"
@@ -267,38 +263,214 @@ forms:
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
-          - form: element_menubook-1-%objective_score_{element_dlc_optional1}_{#system}%
-  #元素无消耗转化
-  element_menubook-total:
+          - form: element_menubook-1-0
+  #金
+  element_optional1-metal:
     type: simple_form
-    title: "存入/转化通用元素 （当前共有 %objective_score_{element_number_total}% 个）"
-    content: "pcub.content.element.tips_total"
+    title: "pcub.title.optional1.metal"
+    content: "pcub.content.element.tips"
     buttons: 
-      - text: "pcub.element.store_total"
-        image: "textures/menubook/chest1"
-        actions:
-          - commands: "player; trigger element_menu_trigger2 set 2"
-      - text: "pcub.element.convert_metal"
-        image: "textures/menubook/element/metal_out"
+      - text: "pcub.element.store5"
+        image: "textures/menubook/element/metal_in"
         actions:
           - commands: "player; trigger element_menu_trigger2 set 3"
-      - text: "pcub.element.convert_wood"
-        image: "textures/menubook/element/wood_out"
+      - text: "pcub.element.storeall"
+        image: "textures/menubook/element/metal_in"
         actions:
           - commands: "player; trigger element_menu_trigger2 set 4"
-      - text: "pcub.element.convert_water"
-        image: "textures/menubook/element/water_out"
+      - text: "pcub.element.get5"
+        image: "textures/menubook/element/metal_out"
         actions:
-          - commands: "player; trigger element_menu_trigger2 set 5"
-      - text: "pcub.element.convert_fire"
-        image: "textures/menubook/element/fire_out"
+          - commands: "player; trigger element_menu_trigger2 set 1"
+      - text: "pcub.element.get64"
+        image: "textures/menubook/element/metal_out"
         actions:
-          - commands: "player; trigger element_menu_trigger2 set 6"
-      - text: "pcub.element.convert_earth"
-        image: "textures/menubook/element/earth_out"
+          - commands: "player; trigger element_menu_trigger2 set 2"
+      - text: "pcub.element.refined.storeall"
+        image: "textures/menubook/element/metal_refined_in"
         actions:
-          - commands: "player; trigger element_menu_trigger2 set 7"
+          - commands: "player; trigger element_menu_trigger2 set 26"
+      - text: "pcub.element.refined.get1"
+        image: "textures/menubook/element/metal_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 27"
+      - text: "pcub.element.refined.get10"
+        image: "textures/menubook/element/metal_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 28"
       - text: "gui.back"
         image: "textures/panling/items/arrow_left"
         actions:
           - form: element_menubook-1-1
+  #木
+  element_optional1-wood:
+    type: simple_form
+    title: "pcub.title.optional1.wood"
+    content: "pcub.content.element.tips"
+    buttons: 
+      - text: "pcub.element.store5"
+        image: "textures/menubook/element/wood_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 7"
+      - text: "pcub.element.storeall"
+        image: "textures/menubook/element/wood_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 8"
+      - text: "pcub.element.get5"
+        image: "textures/menubook/element/wood_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 5"
+      - text: "pcub.element.get64"
+        image: "textures/menubook/element/wood_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 6"
+      - text: "pcub.element.refined.storeall"
+        image: "textures/menubook/element/wood_refined_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 29"
+      - text: "pcub.element.refined.get1"
+        image: "textures/menubook/element/wood_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 30"
+      - text: "pcub.element.refined.get10"
+        image: "textures/menubook/element/wood_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 31"
+      - text: "gui.back"
+        image: "textures/panling/items/arrow_left"
+        actions:
+          - form: element_menubook-1-1
+  #水
+  element_optional1-water:
+    type: simple_form
+    title: "pcub.title.optional1.water"
+    content: "pcub.content.element.tips"
+    buttons: 
+      - text: "pcub.element.store5"
+        image: "textures/menubook/element/water_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 11"
+      - text: "pcub.element.storeall"
+        image: "textures/menubook/element/water_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 12"
+      - text: "pcub.element.get5"
+        image: "textures/menubook/element/water_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 9"
+      - text: "pcub.element.get64"
+        image: "textures/menubook/element/water_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 10"
+      - text: "pcub.element.refined.storeall"
+        image: "textures/menubook/element/water_refined_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 32"
+      - text: "pcub.element.refined.get1"
+        image: "textures/menubook/element/water_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 33"
+      - text: "pcub.element.refined.get10"
+        image: "textures/menubook/element/water_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 34"
+      - text: "gui.back"
+        image: "textures/panling/items/arrow_left"
+        actions:
+          - form: element_menubook-1-1
+  #火
+  element_optional1-fire:
+    type: simple_form
+    title: "pcub.title.optional1.fire"
+    content: "pcub.content.element.tips"
+    buttons: 
+      - text: "pcub.element.store5"
+        image: "textures/menubook/element/fire_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 15"
+      - text: "pcub.element.storeall"
+        image: "textures/menubook/element/fire_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 16"
+      - text: "pcub.element.get5"
+        image: "textures/menubook/element/fire_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 13"
+      - text: "pcub.element.get64"
+        image: "textures/menubook/element/fire_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 14"
+      - text: "pcub.element.refined.storeall"
+        image: "textures/menubook/element/fire_refined_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 35"
+      - text: "pcub.element.refined.get1"
+        image: "textures/menubook/element/fire_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 36"
+      - text: "pcub.element.refined.get10"
+        image: "textures/menubook/element/fire_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 37"
+      - text: "gui.back"
+        image: "textures/panling/items/arrow_left"
+        actions:
+          - form: element_menubook-1-1
+  #土
+  element_optional1-earth:
+    type: simple_form
+    title: "pcub.title.optional1.earth"
+    content: "pcub.content.element.tips"
+    buttons: 
+      - text: "pcub.element.store5"
+        image: "textures/menubook/element/earth_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 19"
+      - text: "pcub.element.storeall"
+        image: "textures/menubook/element/earth_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 20"
+      - text: "pcub.element.get5"
+        image: "textures/menubook/element/earth_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 17"
+      - text: "pcub.element.get64"
+        image: "textures/menubook/element/earth_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 18"
+      - text: "pcub.element.refined.storeall"
+        image: "textures/menubook/element/earth_refined_in"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 38"
+      - text: "pcub.element.refined.get1"
+        image: "textures/menubook/element/earth_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 39"
+      - text: "pcub.element.refined.get10"
+        image: "textures/menubook/element/earth_refined_out"
+        actions:
+          - commands: "player; trigger element_menu_trigger2 set 40"
+      - text: "gui.back"
+        image: "textures/panling/items/arrow_left"
+        actions:
+          - form: element_menubook-1-1
+  #掌上钱庄
+  element_menubook-1-3:
+    type: simple_form
+    title: "pcub.title.element.optional3"
+    content: "pcub.content.element.optional3"
+    buttons: 
+      - text: "查看钱庄存款"
+        actions:
+          - commands: "player; element_menu_trigger3 set 1"
+  #大陆外无法使用
+  element_menubook--1-3:
+    type: modal_form
+    title: "gui.error"
+    content: "pcub.element.disabled"
+    button1:
+      text: "gui.close"
+    button2:
+      text: "gui.back"
+      actions:
+        - form: menubook-be

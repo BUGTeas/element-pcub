@@ -7,12 +7,12 @@
 	},
 	"bedrock":{
 		"fallback":{
-			"pack.name":"§h便捷元素银行资源包 v2024.6.30， 适用于盘灵无界互通开服方案",
+			"pack.name":"§h便捷元素银行资源包 v2024.7.26， 适用于盘灵无界互通开服方案",
 			"pack.description":"§c§l禁止用于其他地图！ §r仅限盘灵无界互通服务端使用！"
 		},
 		"base":{},
 		"conversion":{
-			"pack.name":"§h便捷元素银行资源包 v2024.6.30， 适用于盘灵无界互通开服方案",
+			"pack.name":"§h便捷元素银行资源包 v2024.7.26， 适用于盘灵无界互通开服方案",
 			"pack.description":"§c§l禁止用于其他地图！ §r仅限盘灵无界互通服务端使用！",
 			"pcub.element.disabled":"无法在大陆之外使用此功能。",
 			"pcub.title.element":"便捷元素银行",
@@ -25,13 +25,17 @@
 			"pcub.element.refined.storeall":"存入全部精炼",
 			"pcub.element.refined.get1":"取出 1 个精炼",
 			"pcub.element.refined.get10":"取出 10 个精炼",
-			"pcub.content.element.tips_total":"存入的通用元素可以无消耗转化为任意元素， 并在对应菜单中取出。",
-			"pcub.element.store_total":"背包内元素转化入通用",
-			"pcub.element.convert_metal":"通用元素转化金元素",
-			"pcub.element.convert_wood":"通用元素转化木元素",
-			"pcub.element.convert_water":"通用元素转化水元素",
-			"pcub.element.convert_fire":"通用元素转化火元素",
-			"pcub.element.convert_earth":"通用元素转化土元素"
+			"pcub.element.metal":"金元素",
+			"pcub.element.wood":"木元素",
+			"pcub.element.water":"水元素",
+			"pcub.element.fire":"火元素",
+			"pcub.element.earth":"土元素",
+			"pcub.content.element.optional1":"在此菜单种存入的所有元素都会被转化为通用元素， 且可以转化为任意一种元素， 转化比例均为 1:1。",
+			"pcub.title.optional1.metal":"存入/取出金元素 （通用元素）",
+			"pcub.title.optional1.wood":"存入/取出木元素 （通用元素）",
+			"pcub.title.optional1.water":"存入/取出水元素 （通用元素）",
+			"pcub.title.optional1.fire":"存入/取出火元素 （通用元素）",
+			"pcub.title.optional1.earth":"存入/取出土元素 （通用元素）"
 		},
 		"tw":{}
 	},
