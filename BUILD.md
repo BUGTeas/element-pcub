@@ -6,25 +6,6 @@
 
 将 `DataPack` 目录中的数据包打包，命名为 `element_pcub.zip`
 
-## 修改语言文件：
-
-如果您希望对游戏内的本地化文本进行修改，你可能需要修改语言文件。
-
-在互通服中，原先由 JE 资源包加载的本地化文本都需要合并为单个 JSON 后由 Geyser 加载。但 UI 界面是个例外，需要使用资源包进行加载。
-
-元素银行在游戏内没有本地化文本，这也是它不需要 JE 客户端安装资源包的原因。同样，默认情况下生成的 Geyser 语言文件也是空白的，除非您对 patch 文件做了某些修改。
-
-**环境要求:** Node.js
-
-1. 安装依赖项：
-   - (必要) `npm install git+https://gitee.com/BugTeaON/pcub-locale#v1.0.1` 或 `npm install git+https://github.com/BUGTeas/pcub-locale#v1.0.1`
-   - (可选) 如果需要繁体转换，还需安装 [OpenCC](https://github.com/BYVoid/OpenCC) 转换器，否则输出的繁体文件（“zh_tw”及“zh_hk”）都将是简体内容：`npm install opencc`（安装条件较为苛刻，若无经验建议跳过）
-2. 执行命令 `node index.js` 开始生成
-3. 在“output/panling”目录下会出现以下文件夹：
-   - assets（为 Java 客户端资源包语言文件，“.json”格式，可为 Java 版提供繁体支持）
-   - overrides（为 Geyser 自定义语言文件，“.json”格式，放至 Geyser 配置目录的“locales”目录下）
-   - texts（由基岩客户端资源包加载，“.lang”格式，通常用于显示 UI 内容）
-
 ## 修改资源包
 
 资源包属于人工手动移植，没有生成的途径，故不提供源代码，可以直接从发布了的成品中薅过来。您可以在 `PanGuContinentUnbounded-server/plugins/Geyser-Spigot/packs` 中找到它们，虽然是 zip 格式，但其内部是标准的基岩版资源包结构。

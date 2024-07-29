@@ -1,5 +1,5 @@
 # 便捷元素银行-互通兼容选装组件
-v2024.7.26 正式版（适用于便捷元素银行 v2024.7.24/v2024.7.26）
+v2024.7.29 正式版（适用于便捷元素银行 v2024.7.28）
 
 ## 注意事项
 
@@ -36,23 +36,20 @@ v2024.7.26 正式版（适用于便捷元素银行 v2024.7.24/v2024.7.26）
 	注：自动合并在 Windows 下仅适用于服务端部署包，当然也可以直接将部署包中的“tools”文件夹放至现有服务端的根目录下  
 	当然如果会相关配置文件的语法也可以自行手动合并，和自动合并效果一样
 3. 安装**便捷元素银行**本体：
-   1. 将 `[MDLC] 便捷元素银行 v2024.7.26.zip` 或 `[MDLC] 便捷元素银行 v2024.7.24.zip` 放至服务端的 `world/datapacks` 目录下
-   2. 启动服务端，以 OP 权限或控制台通过以下命令安装：
-      - 启用无损元素转换（安装前执行）：`scoreboard players set #system element_dlc_optional1 1`
-      - 禁用无损元素转换（安装前执行）：`scoreboard players reset #system element_dlc_optional1`
-      - 启用伤害测试人偶（安装前执行）：`scoreboard players set #system element_dlc_optional2 1`
-      - 禁用伤害测试人偶（安装前执行）：`scoreboard players reset #system element_dlc_optional2`
-      - 启用掌上皇城钱庄（安装前执行）：`scoreboard players set #system element_dlc_optional3 1`
-      - 禁用掌上皇城钱庄（安装前执行）：`scoreboard players reset #system element_dlc_optional3`
-      - 注意：掌上皇城钱庄**目前尚未适配基岩版，在基岩版中无法使用**。敬请期待本组件下一次更新！
-      - 开始安装：`function element:install`
-      - 当然如果你能看到聊天栏安装提示也可以直接在聊天栏操作，但前提是你手速快，在服务端启动完毕后 3 秒内进入
-4. 如果您此前已安装“盘灵无界 (DLC 适配)”可选组件，**则请将其相关文件删除以卸载**，因为它与本组件不兼容。需要删除的文件如下：（均在服务端根目录下进行）
-   - pcub_ext_merge
-   - plugins/Geyser-Spigot/custom_mappings/pcub_ext.json
-   - plugins/Geyser-Spigot/packs/PanlingExtensionPack.zip
-   - world/datapacks/pcub_ext.zip
-5. 大功告成！
+   1. 将数据包本体 `[MDLC] 便捷元素银行 v.2024.7.28(2).zip` 放至服务端的 `world/datapacks` 目录下
+   2. 启动服务端，以 OP 权限进服或进入控制台
+   3. 配置附加功能（可选，非必要，只能在安装前执行）：
+      - 无损元素转换
+        - 启用：`scoreboard players set #system element_dlc_optional1 1`
+        - 禁用：`scoreboard players reset #system element_dlc_optional1`
+      - 伤害测试人偶
+        - 启用：`scoreboard players set #system element_dlc_optional2 1`
+        - 禁用：`scoreboard players reset #system element_dlc_optional2`
+      - 掌上皇城钱庄
+        - 启用：`scoreboard players set #system element_dlc_optional3 1`
+        - 禁用：`scoreboard players reset #system element_dlc_optional3`
+   4. 开始安装：`function element:install`（当然如果你能看到聊天栏安装提示也可以直接在聊天栏操作，但前提是你手速快，在服务端启动完毕后 3 秒内进入）
+4. 大功告成！
 
 ## 卸载
 
