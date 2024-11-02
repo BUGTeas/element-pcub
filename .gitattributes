@@ -1,0 +1,14 @@
+# 常规
+* text eol=lf
+# Windows 批处理
+*.bat text eol=crlf
+*.cmd text eol=crlf
+# 图像
+*.png binary
+*.tga binary
+*.psd binary
+# 数据
+*.dat binary
+*.nbt binary
+# 其他
+*.jar binary
