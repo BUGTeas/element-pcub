@@ -4,15 +4,21 @@
 
 ## 修改数据包
 
-将 `DataPack` 目录中的数据包打包，命名为 `element_pcub.zip`
+将 `DataPack` 目录中的所有文件打包压缩，建议命名为 `element_pcub.zip`
 
 ## 修改资源包
 
-资源包属于人工手动移植，没有生成的途径，故不提供源代码，可以直接从发布了的成品中薅过来。您可以在 `PanGuContinentUnbounded-server/plugins/Geyser-Spigot/packs` 中找到它们，虽然是 zip 格式，但其内部是标准的基岩版资源包结构。
+将 `ResourcePack` 目录中的所有文件打包压缩，改后缀为 `.mcpack` 即可直接导入到基岩版客户端中
 
-## 配置文件
+如需在服务端加载，将其放入 `plugins/Geyser-Spigot/packs` 目录下即可，建议命名为 `ElementDedicatedPack.zip`。
 
-在源码文件夹中还包含有已经调整好的一些插件配置文件，它们都在 `ConfigMerge` 目录下，且相对于标准服务端目录结构存放：
+若您正在制作一个独立的修改版，请更改 `manifest.json` 中的 `name` 值以及所有 UUID，以确保这个修改版本不会和原版搞混甚至冲突。
+
+元素和箭头的素材可以在 `Design` 目录中找到。
+
+## 配置文件合并
+
+部分功能需要在原有配置文件的基础上进行增添及修改。为了方便部署，修改过的部分被保存为独立的文件，并将它们相对于标准服务端目录结构存放在 `ConfigMerge` 目录下：
 ```
 ConfigMerge
 └─plugins
@@ -27,6 +33,6 @@ ConfigMerge
 
 需要注意，这些配置文件不能直接通过文件覆盖合并的方式安装，需要按照 YAML 和 JSON 语法对其进行内容合并。
 
-不过服务端部署包中自带了命令行工具 `yq` 和 `jq`（`tools` 目录下），可以实现自动合并。借助自动合并脚本即可完成安装：
-1. 解压合并成品包得到 `element_pcub_merge` 文件夹，或者下载通用自定义合并脚本 (https://github.com/BUGTeas/pcub-merge) 或 (https://gitee.com/BugTeaON/pcub-merge)，得到 `custom_merge` 文件夹，在接下来的步骤中我将其称作**自动合并目录**，且应位于服务端根目录下
-2. 将 `ConfigMerge/plugins` 复制到自动合并目录下，之后就可以像使用说明步骤那样进行自动合并了
+不过服务端部署包中自带了命令行工具 `yq` 和 `jq`（`tools` 目录下），可以实现自动操作。借助自动合并脚本即可完成安装：
+1. 下载自定义配置文件自动合并脚本 (https://github.com/BUGTeas/pcub-merge) 或 (https://gitee.com/BugTeaON/pcub-merge)，得到 `custom_merge` 文件夹 (建议将其更名为 `element_pcub_merge`)，将其放入服务端根目录下
+2. 将 `ConfigMerge/plugins` 放入这个目录即可
