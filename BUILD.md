@@ -22,13 +22,9 @@
 ```
 ConfigMerge
 └─plugins
-    ├─CrossplatForms (CrossPlatForm 配置文件目录)
-    │      bedrock-forms.yml  (新增或覆盖基岩版 Forms 界面)
-    │      config.yml         (增加一些自定义命令)
-    │
-    └─Geyser-Spigot (Geyser 配置文件目录)
-        └─locales/overrides   (需要合并到 Geyser 自定义本地化的 Java 版语言文件)
-                *.json  (由构建者手动将“LangFile/output/element/overrides”目录下的文件移动至此)
+    └─CrossplatForms (CrossPlatForm 配置文件目录)
+           bedrock-forms.yml  (新增或覆盖基岩版 Forms 界面)
+           config.yml         (增加一些自定义命令)
 ```
 
 需要注意，这些配置文件不能直接通过文件覆盖合并的方式安装，需要按照 YAML 和 JSON 语法对其进行内容合并。
