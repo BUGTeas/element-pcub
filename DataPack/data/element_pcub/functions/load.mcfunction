@@ -1,2 +1,3 @@
-#检查基础必要组件版本
-execute unless score #system pcub_api_version matches 1.. run say [元素银行互通兼容] 当前盘灵无界基础必要组件版本低于 v1.1，这将导致所有菜单无法在基岩版打开，请将其升级！
+# 满足此条件则提示兼容性：(当前版本 > 所需版本 || 最低兼容版本 > 所需版本)
+execute unless score #system pcub_api_version matches 6.. run function element_pcub:incompatible_warn
+execute unless score #system pcub_api_minVersion matches ..6 run function element_pcub:incompatible_warn

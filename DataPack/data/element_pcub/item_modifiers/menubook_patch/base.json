@@ -1,0 +1,11 @@
+[
+    {
+        "function": "set_nbt",
+        "tag": "{PublicBukkitValues: {'pcub:run_command': '/element-menu-base'}, CustomModelData: 1, pcub_patch_ver: 0}"
+    }, {
+        "function": "set_name",
+        "name": {
+            "text": "§6便捷元素银行"
+        }
+    }
+]
