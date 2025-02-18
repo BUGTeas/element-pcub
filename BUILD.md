@@ -1,18 +1,22 @@
-# 自行构建元素银行互通兼容组件
+# 构建说明（便捷元素银行专用 Java - 基岩双端互通套件）
 
 注意：根据实际情况修改并单独制作即可，不是每一项都必需
 
-## 修改数据包
+## 打包数据包
 
-将 `DataPack` 目录中的所有文件打包压缩，建议命名为 `element_pcub.zip`
+数据包本体为 `DataPack` 目录，将其放入存档中的 `datapacks` 目录下可直接加载。
 
-## 修改资源包
+也可以将**此目录中的所有文件**打包为 Zip 格式使用。在官方版本包中，它被命名为 `element_pcub.zip`
 
-将 `ResourcePack` 目录中的所有文件打包压缩，改后缀为 `.mcpack` 即可直接导入到基岩版客户端中
 
-如需在服务端加载，将其放入 `plugins/Geyser-Spigot/packs` 目录下即可，建议命名为 `ElementDedicatedPack.zip`。
 
-若您正在制作一个独立的修改版，请更改 `manifest.json` 中的 `name` 值以及所有 UUID，以确保这个修改版本不会和原版搞混甚至冲突。
+## 打包资源包
+
+将 `ResourcePack` 目录中的所有文件打包为 Zip 格式，改后缀为 `.mcpack` 即可直接导入到基岩版客户端中
+
+如需在服务端加载，将其放入 `plugins/Geyser-Spigot/packs` 目录下即可。在官方版本包中，它被命名为 `ElementDedicatedPack.zip`。
+
+若您正在制作一个独立的修改版，请更改 `manifest.json` 中的所有 UUID，以确保其不会和官方版本冲突。（建议更改资源包的名称以便区分）
 
 元素和箭头的素材可以在 `Design` 目录中找到。
 
@@ -26,9 +30,9 @@ ConfigMerge
            bedrock-forms.yml  (新增或覆盖基岩版 Forms 界面)
            config.yml         (增加一些自定义命令)
 ```
-
 需要注意，这些配置文件不能直接通过文件覆盖合并的方式安装，需要按照 YAML 和 JSON 语法对其进行内容合并。
 
-不过服务端部署包中自带了命令行工具 `yq` 和 `jq`（`tools` 目录下），可以实现自动操作。借助自动合并脚本即可完成安装：
-1. 下载自定义配置文件自动合并脚本 (https://github.com/BUGTeas/pcub-merge) 或 (https://gitee.com/BugTeaON/pcub-merge)，得到 `custom_merge` 文件夹 (建议将其更名为 `element_pcub_merge`)，将其放入服务端根目录下
-2. 将 `ConfigMerge/plugins` 放入这个目录即可
+不过梦盘互通套件中自带了相关工具，只需要按下面步骤操作即可轻松完成：
+
+1. 将 `ConfigMerge` 文件夹放入服务端根目录下，以 `_merge` 为结尾重命名（例如 `element_pcub_merge`）
+2. 参照使用说明中的步骤安装即可
